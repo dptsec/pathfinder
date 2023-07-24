@@ -23,6 +23,7 @@ $ go build
 pathfinder accepts input from `stdin` with 1 URL per line. 
 
 Input should be prepared beforehand with `awk -F '?' '{print $1}' | sed 's![^/]*$!!' | sort -u` to remove files and parameters.
+*This will be fixed in a future version so no preparation will be required beforehand.
 
 Any lines that have no `scheme` will have `https://` prepended:
 
