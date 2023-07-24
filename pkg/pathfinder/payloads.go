@@ -59,13 +59,13 @@ var Payloads = []Payload{
 func CreatePayloads(URL string) []string {
 	var p []string
 
-	levels, path, err := utils.ParsePath(URL)
+	levels, _, err := utils.ParsePath(URL)
 	if err != nil {
 		fmt.Printf("[-] CreatePayloads: %v\n", err)
 		return p
 	}
 
-	fmt.Printf("%s -> %s: %d levels\n", URL, path, levels)
+	//	fmt.Printf("%s -> %s: %d levels\n", URL, path, levels)
 	for c := range Payloads {
 		if levels < Payloads[c].MinLevel {
 			continue
